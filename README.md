@@ -10,4 +10,4 @@ Web application connected to firebase database and authentication. User can sign
 
 # Profile page for changing password
 
-![Screenshot 2022-03-11 at 19-18-59 React App](https://user-images.githubusercontent.com/71221268/157927121-6654b2e4-ccb2-4af5-a5fa-85e92277d3db.png)
+![Screenshot 2022-03-11 at 19-22-23 React App](https://user-images.githubusercontent.com/71221268/157927718-13671670-b88d-4867-b6e7-cc149b17b5d6.png)

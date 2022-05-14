@@ -1,0 +1,22 @@
+.not-found {
+  width: 100vw;
+  min-height: 90vh;
+  background-color: rgba(5, 25, 55, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fefefe;
+}
+
+.not-found a {
+  text-decoration: none;
+  color: rgba(5, 25, 55, 1);
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: 250ms ease-out;
+}
+
+.not-found a:hover {
+  color: rgb(0, 116, 69);
+}

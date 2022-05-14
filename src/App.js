@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './components/Header';
+import Log from './pages/Log';
+import { Routes, Route } from 'react-router-dom';
+import Profile from './pages/Profile';
+import Dashboard from './pages/Dashboard';
+import { useSelector } from 'react-redux';
+import NotFound from './pages/NotFound';
 
-function App() {
+const App = () => {
+
+  const isUserLoggedIn = useSelector(state => state.isLoggedIn);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header />
+      <Routes>
+        <Route path='/react-auth-app' element={<Dashboard />} />
+        {!isUserLoggedIn && <Route path='/react-auth-app/login' element={<Log />} />}
+        {isUserLoggedIn && <Route path='/react-auth-app/profile' element={<Profile />} />}
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </React.Fragment>
   );
 }
 
